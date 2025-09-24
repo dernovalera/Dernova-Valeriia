@@ -1,0 +1,16 @@
+import java.util.LinkedList;  // подключаем готовый класс 
+
+public class Main {
+    public static void main(String[] args) {
+        LinkedList<Integer> list = new LinkedList<>(); // создаём пустой список для целых чисел
+
+        list.add(10); // добавляем в конец списка
+        list.add(20); // добавляем в конец списка
+        list.add(30); // добавляем в конец списка
+
+        System.out.println(list.get(0)); // получаем первый элемент по индексу
+        System.out.println(list.getLast()); // получаем последний элемент по индексу
+        list.remove(1); // удаляем элемент с индексом 1
+        System.out.println(list); // выводим список
+    }
+}
