@@ -1,0 +1,16 @@
+import java.util.Stack; // подключение класса Stack
+
+public class Main {
+    public static void main(String[] args) {
+        Stack<Integer> stack = new Stack<>(); // создаем стек, который будет хранить числа (создаем пустой список)
+
+        stack.push(10); // добавляем на вершину стека
+        stack.push(20); // добавляем на вершину стека
+        stack.push(30); // добавляем на вершину стека
+
+        System.out.println(stack.peek()); // смотрим верхушку (без удаления)
+        System.out.println(stack.pop());  // снимаем верхушку (при этом она тоже выводится)
+        System.out.println(stack.pop());  // снимаем новую верхушку (при этом она тоже выводится)
+        System.out.println(stack.isEmpty()); // проверяем пуст ли стек
+    }
+}
