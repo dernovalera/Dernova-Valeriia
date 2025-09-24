@@ -1,0 +1,22 @@
+class Node {  // объявляем класс 
+    int val; Node next;  // int val - поле, где хранится число; Node next - поле, где хранится ссылка на след узел
+    Node(int v) { val = v; }
+}
+
+class LinkedList {  // создаем сам список
+    Node head;  // первый элемент
+    void add(int v) {  // добавляем новый элемент (в конец списка)
+        Node n = new Node(v);  // создаем новый узел с переданным значением
+        if (head == null) head = n;  // проверяем пуст ли список, если да - узел становится головой списка
+        else { Node c = head; while(c.next!=null) c=c.next; c.next=n; }  // если не пуст, то ищем конец: "c" указывает на первый узел, ходим по списку, пока не найдем узел, у которого next == null, послед. узел будет ссылаться на новый узел n
+    }
+    void print() { for(Node c=head; c!=null; c=c.next) System.out.print(c.val+" ") ; }  // выводятся все элементы списка на экран, System.out.print(c.val+" ") - печатаем значение узла, разделяя пробелами
+}
+
+public class Main {  // запуск кода
+    public static void main(String[] args) {
+        LinkedList list = new LinkedList();  // создаем новый список
+        list.add(10); list.add(20); list.add(30);  // добавляем элементы в список
+        list.print(); // выводим элементы
+    }
+}
